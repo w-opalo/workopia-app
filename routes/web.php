@@ -24,6 +24,4 @@ use Illuminate\Http\Request;
 Route::get('/', [HomeController::class, 'index']);
 
 
-// Route::resource('/jobs', [JobController::class]);
-
-Route::resource('/jobs', JobController::class);
+Route::resource('/jobs', [JobController::class]);
