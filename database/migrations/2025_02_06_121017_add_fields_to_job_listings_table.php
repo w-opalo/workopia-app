@@ -17,7 +17,6 @@ return new class extends Migration
 
         Schema::table('job_listings', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id')->after('id');
-
             $table->integer('salary');
             $table->string('tags')->nullable();
             $table->enum('job_type', ['Full-Time', 'Part-Time', 'Contract', 'Temporary', 'Internship', 'Volunteer', 'On-Call'])->default('Full-Time');
