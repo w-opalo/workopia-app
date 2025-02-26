@@ -1,4 +1,6 @@
-@props(['id', 'name',
+@props([
+    'id', 
+    'name',
     'label'=>null,
     'value'=>'',
     'placeholder'=>'',
