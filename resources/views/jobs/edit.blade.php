@@ -30,7 +30,7 @@
                 name="job_type"
                 label="Job Type"
                 :options="['Full-Time' => 'Full-Time', 'Part-Time' => 'Part-Time', 'Contract' => 'Contract', 'Temporary' => 'Temporary', 'Internship' => 'Internship', 'Volunteer' => 'Volunteer', 'On-Call' => 'On-Call']"
-                :value="old('job_type', $job->job_type)"
+                :value="old('job_type', $job->job_type)" 
             />
 
             <x-inputs.select id="remote" name="remote" label="Remote" :options="[0=>'No', 1=>'Yes']" :value="old('remote', $job->remote)" />

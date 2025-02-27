@@ -98,7 +98,7 @@ class JobController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Job $job): string
+    public function update(Request $request, Job $job): RedirectResponse
     {
         //
         $validatedData = $request->validate([
@@ -155,8 +155,5 @@ class JobController extends Controller
         $job->delete();
 
         return redirect()->route('jobs.index')->with('success', 'Job Listing deleted Succesfully');
-
-
-        // return "Delete job $id";
     }
 }
