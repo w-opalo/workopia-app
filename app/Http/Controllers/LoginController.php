@@ -27,7 +27,7 @@ class LoginController extends Controller
     public function authenticate(Request $request): RedirectResponse
     {
         $credentials = $request->validate([
-            'email' => 'required|string|email|max:255|',
+            'email' => 'required|string|email|max:255',
             'password' => 'required|string',
         ]);
 
@@ -37,12 +37,12 @@ class LoginController extends Controller
             $request->session()->regenerate();
 
             // Redirect to the intended route or a default route
-            return redirect()->intended(route('home'))->with('success', 'You are now logged in!');
+            return redirect()->intended(route('home'))->with('success', 'You are now logged!');
+        }
 
-            // If authentication fails, redirect back with an error message
-            return back()->withErrors([
-                'email' => 'The provided credentials do not match our records.',
-            ])->onlyInput('email');
-        };
+        // If authentication fails, redirect back with an error message
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
     }
 }

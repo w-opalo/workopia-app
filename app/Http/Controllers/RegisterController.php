@@ -18,11 +18,11 @@ class RegisterController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:50',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
         ]);
-        //hash
+        //hash the password
         $validatedData['password'] = Hash::make($validatedData['password']);
 
         //create user

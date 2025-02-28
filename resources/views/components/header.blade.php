@@ -1,13 +1,3 @@
-<?php
-    // $isActive = request()->is('jobs');
-
-    // echo $isActive ? 'Avtive' : '';
-
-    // if ($isActive) {
-    //     echo $isActive; // Output the variable
-    // }
-?>
-
 <!-- Header -->
 <header class="bg-blue-900 text-white p-4">
     <div class="container mx-auto flex justify-between items-center">
