@@ -26,9 +26,9 @@ use Illuminate\Http\Request;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Route::resource('/jobs', JobController::class);
-Route::resource('jobs', JobController::class)->only(['create', 'edit', 'destroy']);
-Route::resource('jobs', JobController::class)->except(['create', 'edit', 'destroy']);
+Route::resource('/jobs', JobController::class);
+// Route::resource('jobs', JobController::class)->only(['create', 'edit', 'destroy']);
+// Route::resource('jobs', JobController::class)->except(['create', 'edit', 'destroy']);
 
 // Route::middleware('guest')->group(function () {
 //     Route::get('/register', [RegisterController::class, 'register'])->name('register');

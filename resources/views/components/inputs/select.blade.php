@@ -16,9 +16,9 @@
         name="{{$name}}"
         class="w-full px-4 py-2 border rounded focus:outline-none @error($name)@enderror">
         @foreach ($options as $optionValue => $optionLabel)    
-        <option value="{{$optionValue}}" {{old($name, $value) == $optionValue ? 'selected' : ''}}>
-            {{$optionLabel}}
-        </option>
+            <option value="{{$optionValue}}" {{old($name, $value) == $optionValue ? 'selected' : ''}}>
+                {{$optionLabel}}
+            </option>
         @endforeach
     </select>
     @error($name)

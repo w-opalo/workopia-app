@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 // use Illuminate\Support\Facades\Route;
 
@@ -23,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         // Route::pattern('id', '[0-9]+');
+        Model::preventLazyLoading();
     }
 }
