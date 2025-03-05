@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->addColumn('varchar', 'name', ['length' => 100]);
             $table->timestamps();
         });
     }
