@@ -6,7 +6,7 @@
             Create Job Listing
         </h2>
         <form method="POST" action="{{route('jobs.store')}}" enctype="multipart/form-data"> 
-        @csrf
+            @csrf
             <h2 class="text-2xl font-bold mb-6 text-center text-gray-500">
                 Job Info
             </h2>

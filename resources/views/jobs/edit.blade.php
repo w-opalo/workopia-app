@@ -6,8 +6,8 @@
             Edit Job Listing
         </h2>
         <form method="POST" action="{{route('jobs.update', $job->id)}}" enctype="multipart/form-data">
-        @csrf
-        @method('PUT')
+            @csrf
+            @method('PUT')
             <h2 class="text-2xl font-bold mb-6 text-center text-gray-500">
                 Job Info
             </h2>
